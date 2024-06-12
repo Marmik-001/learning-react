@@ -34,3 +34,4 @@ const Card = ({ userName = "User Name" , pfp = "https://wallpapers.com/images/hd
 export default Card
 
 //on line 20 instead of using the props.userName we can directly use the userName as we have already destructured it 
+
