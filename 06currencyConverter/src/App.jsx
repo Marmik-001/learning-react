@@ -11,17 +11,19 @@ function App() {
 
   const currencyData = useCurrency(from)  // we are storing the data that we get from the useCurrency into a variable  , also we are passing the default value into it that is 'from'
 
-  const option = Object.keys(currencyData)
+   const option = Object.keys(currencyData) 
+ // The Object.keys() method takes an object and returns an array of the object's own enumerable property names (keys).
+  // In this case, it extracts the currency codes from the currencyData object.
 
   const convert = () => {
     setConvertedAmount(amount *currencyData[to])
   }
-  const swap = () => {
-    setFrom(to)
-    setTo(from)
-    setConvertedAmount(amount)
-    setAmount(convertedAmount)
-  }
+  // const swap = () => {
+  //   setFrom(to)
+  //   setTo(from)
+  //   setConvertedAmount(amount)
+  //   setAmount(convertedAmount)
+  // }  feature not added
   return (
   
     /* <div className='bg-gradient-to-r from-orange-950 to-slate-50'>
@@ -37,7 +39,7 @@ function App() {
       <div className='w-full'>
         <div className='w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30'>
           <form onSubmit={(e) => {
-            e.preventDefault()
+            e.preventDefault()       /* e.preventDefault() is a method in JavaScript that is used to prevent the default behavior of an event from occurring. This method is often used in the context of handling form submissions, link clicks, and other actions where you want to override the browser's default behavior with custom functionality. */
             convert()
           }}>
             <div className='w-full my-2'>

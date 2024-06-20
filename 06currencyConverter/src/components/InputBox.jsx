@@ -23,7 +23,10 @@ function InputBox({
             placeholder='Amount'
             disabled ={amountDisabled}
             value={amount}
-            onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+            onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}    /* if (onAmountChange) {
+                // Call the number if you have it (onAmountChange exists)
+                onAmountChange(newValue);
+              } long for of writing this  */
             />
         </div>
         <div className='w-1/2 flex flex-wrap justify-end text-right'>
